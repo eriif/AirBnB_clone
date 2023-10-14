@@ -5,6 +5,7 @@ import models
 from uuid import uuid4
 from datetime import datetime
 
+
 class BaseModel:
     """
     Rep. the basemodel of the airbnb project
@@ -30,7 +31,6 @@ class BaseModel:
                     self.__dict__[k] = v
         else:
             models.storage.new(self)
-
 
         def save(self):
             """
